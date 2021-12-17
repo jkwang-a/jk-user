@@ -1,0 +1,46 @@
+syntax = "proto3";
+package rpc_pb;
+ 
+import "user_common.proto";
+service User {
+  rpc List  (PagerReq)  returns  (PagerResp) {};
+  rpc Add 	(UserReq)  returns  (UserResp) {};
+  rpc Del 	(UserReq)  returns  (UserResp) {};
+  rpc Update (UserReq)  returns (UserResp) {};
+  rpc Login  (UserReq)  returns (UserResp) {};
+  rpc Get_Mgr_UserList  (UserReq)  returns (UserResp) {};
+  rpc Login_AZure  (UserReq)  returns (UserResp) {};
+  rpc GetUserByKey (UserReq)  returns (UserResp) {};
+  rpc GetUserById (UserReq)  returns (UserResp) {};
+  rpc AccessStatistics (UserReq)  returns (DashboardAccessResp){};
+  rpc GetUserList  (PagerReq)  returns  (PagerResp) {};
+  rpc AddUser 	(UserReq)  returns  (UserResp) {};
+  rpc DelUser 	(UserReq)  returns  (UserResp) {};
+  rpc UpdateUser (UserReq)  returns (UserResp) {};
+  rpc EditUserStatus (UserReq)  returns (UserResp) {};
+  rpc UserLogin  (UserReq)  returns (UserResp) {};
+  rpc User_Login_AZure  (UserReq)  returns (UserResp) {};
+  rpc GetUserDetailByKey (UserReq)  returns (UserResp) {};
+  rpc GetUserIdWithParentId (UserReq)  returns (UserResp) {};
+  rpc UpdateNewUser (UserReq)  returns (UserResp) {};
+  rpc UpdateAllUser (UserReq)  returns (UserResp) {};
+}
+ 
+//用户查找请求
+ 
+ 
+ 
+message  UserReq {
+   string message =1;
+   string client_ip =2;
+   string email =3;
+   string api_key =4;
+}
+
+message  UserResp {
+   string message =1;
+}
+
+message DashboardAccessResp {
+	string access_list = 1;
+}

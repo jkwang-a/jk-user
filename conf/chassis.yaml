@@ -1,0 +1,12 @@
+---
+cse:
+  service:
+    registry:
+     address: http://127.0.0.1:30101
+  protocols:
+    grpc:
+      listenAddress: 127.0.0.1:5002
+      advertiseAddress: 127.0.0.1:5002
+
+#注册中心地址
+#监听地址

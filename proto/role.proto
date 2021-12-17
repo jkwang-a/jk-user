@@ -1,0 +1,17 @@
+syntax = "proto3";
+package rpc_pb;
+ 
+import "user_common.proto";
+service Role {
+  rpc List  (PagerReq)  returns  (PagerResp) {};
+  rpc Add 	(RoleReq)  returns  (RoleResp) {};
+  rpc Del 	(RoleReq)  returns  (RoleResp) {};
+  rpc Update (RoleReq)  returns (RoleResp) {};
+ 
+}
+message  RoleReq {
+   string message =1;
+}
+message  RoleResp {
+   string message =1;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+package rpc_pb;
+ 
+import "user_common.proto";
+service Org {
+  rpc List  (PagerReq)  returns  (PagerResp) {};
+  rpc Add 	(OrgReq)  returns  (OrgResp) {};
+  rpc Del 	(OrgReq)  returns  (OrgResp) {};
+  rpc Update (OrgReq)  returns (OrgResp) {};
+  rpc GetOrgList  (PagerReq)  returns  (PagerResp) {};
+  rpc EditOrgStatus 	(Req)  returns  (Resp) {};
+  rpc BatchDelOrg 	(Req)  returns  (Resp) {};
+  rpc SortOrg (Req)  returns (Resp) {};
+ 
+}
+message  OrgReq {
+   string message =1;
+}
+message  OrgResp {
+   string message =1;
+}
