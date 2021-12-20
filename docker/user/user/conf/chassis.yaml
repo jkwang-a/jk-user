@@ -1,9 +1,0 @@
----
-cse:
-  service:
-    registry:
-     address: http://CSE_REGISTRY_ADDRESS
-  protocols:
-    grpc:
-      listenAddress: CSE_GRPC_LISTEN
-      advertiseAddress: CSE_GRPC_ADVERTISE
